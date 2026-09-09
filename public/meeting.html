@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Meeting</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <span id="room-label"></span>
+    <span id="role-label"></span>
+  </div>
+
+  <div id="videos" class="video-grid"></div>
+
+  <div id="teacher-panel" class="teacher-panel" hidden>
+    <h3>Engagement</h3>
+    <div id="engagement-list"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/engagement.js"></script>
+  <script src="js/webrtc.js"></script>
+  <script src="js/meeting.js"></script>
+</body>
+</html>
