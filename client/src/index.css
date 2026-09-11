@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+/* Accessible dark-dashboard design tokens. Contrast ratios are verified
+   against WCAG AA requirements for their intended use. */
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #020617;
+  --color-card: #0e1223;
+  --color-card-hover: #131829;
+  --color-border: #263041;
+  --color-border-strong: #334155;
+
+  --color-foreground: #f8fafc;
+  --color-muted-foreground: #94a3b8; /* 7.9:1 on --color-background */
+
+  --color-primary: #2563eb; /* blue-600, filled surfaces (white text: 5.2:1) */
+  --color-primary-foreground: #ffffff;
+  --color-ring: #3b82f6; /* blue-500, 5.5:1 on --color-background, used for text/links/focus rings */
+
+  --color-success: #22c55e; /* engaged, 8.9:1 */
+  --color-warning: #fbbf24; /* bored, 12.1:1 */
+  --color-info: #22d3ee; /* confused marker, 11.2:1 — kept distinct from primary blue */
+  --color-danger: #ef4444; /* flagged / destructive, 5.4:1 */
+}
+
+html, body, #root {
+  height: 100%;
+}
+body {
+  background: var(--color-background);
+  color-scheme: dark;
+}
+
+/* Global keyboard focus indicator, supplemented by component-level rings. */
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+@keyframes dashboard-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
