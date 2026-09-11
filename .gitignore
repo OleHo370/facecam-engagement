@@ -1,1 +1,10 @@
 node_modules/
+client/dist/
+server/dist/
+ml/data/
+ml/checkpoints/
+ml/*.task
+ml/wandb/
+ml/venv/
+ml/thresholds*.json
+.DS_Store
