@@ -1,0 +1,9 @@
+opencv-python==5.0.0.93
+mediapipe==0.10.21
+pandas==2.3.3
+numpy==1.26.4
+torch==2.8.0
+onnx==1.19.1
+onnxruntime==1.19.2
+wandb==0.26.1
+scikit-learn==1.6.1
